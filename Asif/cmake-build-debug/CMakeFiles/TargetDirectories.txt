@@ -1,0 +1,3 @@
+/home/asif221b/Documents/Project Uni/Computer-Program-Syntax-Checker/Asif/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/asif221b/Documents/Project Uni/Computer-Program-Syntax-Checker/Asif/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/asif221b/Documents/Project Uni/Computer-Program-Syntax-Checker/Asif/cmake-build-debug/CMakeFiles/Asif.dir

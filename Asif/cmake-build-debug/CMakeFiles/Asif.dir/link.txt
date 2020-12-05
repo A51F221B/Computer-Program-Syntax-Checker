@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/Asif.dir/main.cpp.o  -o Asif 
