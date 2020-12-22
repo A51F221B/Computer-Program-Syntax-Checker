@@ -43,11 +43,9 @@ Methods:
     parentheses checking algorithm of stack which is one of its application. The algorithm
     was modified for keywords instead of parentheses.
 
+![classdiagram.PNG](https://github.com/A51F221B/Computer-Program-Syntax-Checker/blob/main/classdiagram.PNG)
 
-**Class Diagram:**
-
-
-Flow Chart:
+![flowchart.PNG](https://github.com/A51F221B/Computer-Program-Syntax-Checker/blob/main/flowchart.PNG)
 
 **Project is hosted on Github at this link:**
 
