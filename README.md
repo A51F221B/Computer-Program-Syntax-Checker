@@ -4,9 +4,7 @@
 
 ### DEVELOPERS:
 
-### ASIF MASOOD (190794) AND OZAIR MALIK
-
-### ( 19079 8)
+### ASIF MASOOD AND OZAIR MALIK
 
 
 Data Structures and Algorithms Used:
