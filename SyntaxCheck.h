@@ -1,15 +1,17 @@
 #pragma once
+
 #include<iostream>
 #include<string>
 #include "Stack.h"
 using namespace std;
 #define MAX 100
 
-
+//it has functions to check keywords and parentheses
 class SyntaxCheck
 {
 public:
-   static bool are_brackets(const string& expression)
+    //it checks if the content are brackets
+    static bool are_brackets(const string& expression)
     {
         for (char i : expression) {
             if (i == '{' || i == '}'
@@ -18,6 +20,7 @@ public:
         }
         return false;
     }
+    //it compares the keywords 
     static bool keywords(string data[], int size)
     {
         if (data[0] != "Begin")
@@ -25,16 +28,12 @@ public:
             cout << "begin NOT found!" << endl;
             exit(0);
         }
-        if (data[size - 1] != "end")
-        {
-            cout << "end NOT found!" << endl;
-            exit(0);
-        }
+      
 
         string keywords[MAX];
         int keyword_size = 0;
-        for (int i = 0; i < size; i++) 
-        {         // Complexity is O(N)
+        for (int i = 0; i < size; i++)
+        {       
             if (data[i].find("Begin") != std::string::npos)
                 keywords[keyword_size++] = "Begin";
             if ((data[i].find("if") != std::string::npos)
@@ -101,7 +100,7 @@ public:
                     temp = s.Top();
                     s.pop();
                     if (temp == "for" || temp == "while" || temp == "Begin") {
-                        cout << "Invalid if/endif declaration"<<endl;;
+                        cout << "Invalid if/endif declaration" << endl;;
                         exit(0);
                     }
                 }
@@ -122,8 +121,8 @@ public:
                     exit(0);
                 }
             }
-            else if (keywords[i] == "end"){
-                if (i != size - 1) {
+            else if (keywords[i] == "end") {
+                if (i != keyword_size - 1) {
                     cout << "Multiple end statements found!" << endl;
                     exit(0);
                 }
@@ -133,7 +132,7 @@ public:
         }
         return s.empty();
     }
-
+    //it checks the brackets
     static bool check_brackets(string* data, int size) {
         string expr = "";
         // Get all the brackets in the entire string array.
@@ -189,17 +188,13 @@ public:
                     return false;
                 break;
             }
-           /* if (!s.empty())
-            {
-                cout << "Missing Parantheses: " << s.Top() << endl;
-                break;
-            }*/
-            
+           
+
         }
 
         return s.empty();
     }
-    static bool substring(const string& toCheck, const string& subString) 
+    static bool substring(const string& toCheck, const string& subString)
     {
         return toCheck.find(subString) != std::string::npos;
     }
