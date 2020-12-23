@@ -7,21 +7,21 @@
 ### ASIF MASOOD AND OZAIR MALIK
 
 
-Data Structures and Algorithms Used:
+### Data Structures and Algorithms Used:
 
-- String Array/Pointer:
+#### - String Array/Pointer:
     Firstly, read the file in a string and then copied the whole content in string array for the
     purpose of extraction of content and comparison. Using pointer the array is allocated at
     run time according to the size of file.
-- Linked-list Stack (string):
+#### - Linked-list Stack (string):
     We already have an algorithm for checking parentheses using stack basic operations
     (push, pop, top) so and Linked-list stack is used due to the fact that it adds nodes on run
     time dynamically according to the input and as we do not know that the exact length of
     data in file so that’s why we needed a data structure to allocate memory on run time.
 
-Methods:
+#### Methods:
 
-- Parentheses checker:
+#### - Parentheses checker:
     This function takes input from file content as string and performs comparison between
     the opening and closing braces.
     Firstly, we extracted the braces from file.
@@ -31,7 +31,7 @@ Methods:
     This operation is done using stack.
     The rest of the comparison operation is performed using the pre-defined parentheses
     checking algorithm of stack which is one of its application.
-- Keywords Checker:
+#### - Keywords Checker:
     This function takes input from file content as string and performs comparison between
     the opening and closing keywords.
     Firstly, we extracted the keywords from file and copied them into a string array.
