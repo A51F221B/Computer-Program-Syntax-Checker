@@ -1,18 +1,8 @@
-#include <iostream>
 #include<fstream>
-#include<cstring>
-#include<string>
-#include<vector>
-#include"Stack.h"
 #include"SyntaxCheck.h"
-
 
 using namespace std;
 
-void checkBegin(string filename) {
-    vector<string> begin;
-
-}
 int main()
 {
     cout << "[>] Developed By " << endl;
@@ -20,34 +10,45 @@ int main()
     cout << "Asif Masood (190794) " << endl;
     SyntaxCheck check1;
     fstream file;
+    
     cout << "[>] Enter the name of file you want to check " << endl;
     string fileName;
+
     getline(cin, fileName);
     file.open(fileName, ios::in);
     string readExprs;
-    if (!file.good())
+    //checks if file is accesible or not
+    while (!file.good())
     {
         cout << "[!] File not found or isn't accessible" << endl;
-        cin.get();
-        return -1;
+        cout << "[*] Enter a correct name of the file you want to open: ";
+        getline(cin, fileName);
+        file.open(fileName, ios::in);
     }
 
     int fileLen = 0;
+    //reads file as a string line
     while (!file.eof())
     {
         std::getline(file, readExprs);
         fileLen++;
     }
-    file.seekg(0, ios::beg); // Takes the file pointer to the beginning of the file so that we can read it again.
+
+    file.close();
+    file.open(fileName, ios::in);
+
+  
 
     string* data = new string[fileLen];
     int loop = 0;
+    //copy file into a string array
     while (!file.eof())
         while (getline(file, data[loop++]));
 
-
+   //displaying contents of file 
     cout << "[>] Printing File output  : " << endl;
-    for (int i = 0; i < fileLen; i++) {
+    for (int i = 0; i < fileLen; i++)
+    {
         cout << data[i] << endl;
     }
 
