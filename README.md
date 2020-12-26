@@ -1,10 +1,8 @@
-# DSA PROJECT
-
-## Syntax Checker
+ #                                                       Syntax Checker
 
 ### DEVELOPERS:
 
-### ASIF MASOOD AND OZAIR MALIK
+### A51F221B AND OZAIR MALIK
 
 
 ### Data Structures and Algorithms Used:
